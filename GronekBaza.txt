@@ -1,0 +1,26 @@
+drop DATABASE SklepGronek;
+CREATE DATABASE SklepGronek CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE TABLE SklepGronek.Produkty (
+    Produkt_id INTEGER not null AUTO_INCREMENT UNIQUE,
+    NazwaKG VARCHAR (70),
+    FirmaKG VARCHAR (70),
+    KategoriaKG VARCHAR(70),
+	CenaKG int(20),
+    StanKG int(20),
+	primary key (produkt_id)
+
+    );
+INSERT INTO SklepGronek.Produkty (
+    NazwaKG,
+	FirmaKG,
+	KategoriaKG,
+	CenaKG,
+	StanKG
+    )
+    VALUES
+		  ('Narty','SALOMON','main','780,-','35')
+		 ,('Kask','HEAD','additives','420,-','30')
+		 ,('Snowboard','OAKLEY','main','1200,-','26')
+		 ,('Okulary','GIANT','additives','250,-','10')
+		 ,('Buty','FISHER','main','559,-','32')
+;
